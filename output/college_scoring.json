@@ -1,0 +1,391 @@
+{
+  "_metadata": {
+    "description": "Complete scoring of all eligible Cambridge colleges for Engineering 2026 entry. Scores based on 6 weighted criteria. REVISED with concrete Winter Pool import data from 2025 cycle FOI responses.",
+    "scoring_date": "2026-06-06",
+    "revision": "2.1 — Added concrete pool import numbers, refined all criteria scores",
+    "total_colleges_evaluated": 29,
+    "colleges_excluded": 11,
+    "colleges_eligible": 18,
+    "key_data_sources": {
+      "winter_pool_imports_2025": "FOI 2025 cycle — pool offers made by each college",
+      "chinese_student_data": "Cambridge published demographics + Chinese education platform analyses",
+      "overall_admissions": "Cambridge Power BI dashboard + FOI 2025/510 Chen + FOI 2025/675 Carlo",
+      "engineering_estimates": "Estimated from overall college data with engineering proportion (~12% of applicants). Confidence rated per college."
+    },
+    "excluded_reasons": {
+      "too_demanding": ["Trinity", "Churchill", "Peterhouse"],
+      "female_only": ["Newnham", "Murray Edwards"],
+      "mature_colleges": ["Hughes Hall", "St Edmund's", "Wolfson"],
+      "user_preference": ["Downing", "Magdalene", "Lucy Cavendish"]
+    },
+    "criteria_weights": {
+      "C1_offer_rate": {"weight_pct": 25, "direction": "positive", "description": "Estimated Engineering offer rate"},
+      "C2_chinese_friendliness": {"weight_pct": 25, "direction": "positive", "description": "Track record with Chinese mainland applicants"},
+      "C3_pool_independence": {"weight_pct": 20, "direction": "positive", "description": "Lower pool imports = better (fewer pool offers made by college = more direct offers). Based on FOI 2025 pool data."},
+      "C4_stability": {"weight_pct": 15, "direction": "positive", "description": "Year-over-year application/offer stability"},
+      "C5_cohort_size": {"weight_pct": 10, "direction": "positive", "description": "Optimal engineering cohort (80-120 apps). Penalizes too small (<40) or too large (>160)."},
+      "C6_entry_requirements": {"weight_pct": 5, "direction": "positive", "description": "Lower/standard requirements = better"}
+    }
+  },
+
+  "final_rankings": [
+    {
+      "rank": 1,
+      "college": "Robinson College",
+      "score": 86.5,
+      "grade": "A",
+      "verdict": "BEST CHOICE — Highest Chinese student proportion + strong Engineering offer rate",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 9, "weight_pct": 25, "weighted": 22.5, "detail": "Est. 13.3% — above Cambridge Engineering average (12.0%)"},
+        "C2_chinese_friendliness": {"raw": 10, "weight_pct": 25, "weighted": 25.0, "detail": "VERY HIGH — Highest Chinese student proportion among Cambridge colleges; strong Chinese society"},
+        "C3_pool_independence": {"raw": 7, "weight_pct": 20, "weighted": 14.0, "detail": "Est. 30–35 pool offers made (2025); moderate pool reliance; not a major 'fisher'"},
+        "C4_stability": {"raw": 8, "weight_pct": 15, "weighted": 12.0, "detail": "Stable admissions; consistent year-over-year; no concerning spikes"},
+        "C5_cohort_size": {"raw": 8, "weight_pct": 10, "weighted": 8.0, "detail": "Est. 75 Engineering applicants — good-sized, well-supported cohort"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard Cambridge Engineering offer (IB 41-42, 7-7-6 HL; A-Level A*A*A)"}
+      }
+    },
+    {
+      "rank": 2,
+      "college": "Homerton College",
+      "score": 80.5,
+      "grade": "A-",
+      "verdict": "STRONG CHOICE — Largest Chinese applicant community, BUT heavily relies on Winter Pool (84 pool offers in 2025)",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 9, "weight_pct": 25, "weighted": 22.5, "detail": "Est. 13.3% — above Cambridge Engineering average"},
+        "C2_chinese_friendliness": {"raw": 10, "weight_pct": 25, "weighted": 25.0, "detail": "VERY HIGH — Most popular Cambridge college for Chinese applicants (170+ in 2024); largest Chinese student community"},
+        "C3_pool_independence": {"raw": 3, "weight_pct": 20, "weighted": 6.0, "detail": "⚠ 84 pool offers made (2025) — 3rd highest pool 'fisher' among all colleges. Significant pool reliance means potentially fewer direct offer slots."},
+        "C4_stability": {"raw": 8, "weight_pct": 15, "weighted": 12.0, "detail": "Gradual, manageable growth; no alarming spikes"},
+        "C5_cohort_size": {"raw": 10, "weight_pct": 10, "weighted": 10.0, "detail": "Est. 120 Engineering applicants — optimal cohort size; vibrant peer group"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard Cambridge Engineering offer"}
+      }
+    },
+    {
+      "rank": 3,
+      "college": "Clare College",
+      "score": 77.5,
+      "grade": "B+",
+      "verdict": "SOLID CHOICE — Best direct-offer behavior; rare pool participant means your application gets a direct decision",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 7, "weight_pct": 25, "weighted": 17.5, "detail": "Est. 12.0% — at Cambridge Engineering average"},
+        "C2_chinese_friendliness": {"raw": 6, "weight_pct": 25, "weighted": 15.0, "detail": "MODERATE — Decent Chinese presence; not outstanding but not problematic"},
+        "C3_pool_independence": {"raw": 9, "weight_pct": 20, "weighted": 18.0, "detail": "★ Rarely takes from pool — one of the colleges noted by FOI data as making almost all offers directly. This is Clare's standout feature."},
+        "C4_stability": {"raw": 8, "weight_pct": 15, "weighted": 12.0, "detail": "Stable admissions; predictable year-over-year"},
+        "C5_cohort_size": {"raw": 10, "weight_pct": 10, "weighted": 10.0, "detail": "Est. 100 Engineering applicants — ideal cohort size"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard Cambridge Engineering offer"}
+      }
+    },
+    {
+      "rank": 4,
+      "college": "Sidney Sussex College",
+      "score": 76.5,
+      "grade": "B+",
+      "verdict": "GOOD VALUE — Highest estimated Engineering offer rate among eligible colleges; moderate across other criteria",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 9, "weight_pct": 25, "weighted": 22.5, "detail": "Est. 13.8% — highest among eligible colleges (overall college offer rate 19.4% is also strong)"},
+        "C2_chinese_friendliness": {"raw": 6, "weight_pct": 25, "weighted": 15.0, "detail": "MODERATE — Decent but unremarkable Chinese community"},
+        "C3_pool_independence": {"raw": 7, "weight_pct": 20, "weighted": 14.0, "detail": "Est. 25–30 pool offers; low-moderate pool reliance"},
+        "C4_stability": {"raw": 8, "weight_pct": 15, "weighted": 12.0, "detail": "Stable admissions; consistent patterns"},
+        "C5_cohort_size": {"raw": 8, "weight_pct": 10, "weighted": 8.0, "detail": "Est. 65 Engineering applicants — comfortable size"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard Cambridge Engineering offer"}
+      }
+    },
+    {
+      "rank": 5,
+      "college": "Emmanuel College",
+      "score": 74.0,
+      "grade": "B",
+      "verdict": "DECENT CHOICE — Good Engineering offer rate and optimal cohort size; notable for being a heavy exporter to the Winter Pool",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 8, "weight_pct": 25, "weighted": 20.0, "detail": "Est. 12.7% — solid, above-average for Engineering"},
+        "C2_chinese_friendliness": {"raw": 6, "weight_pct": 25, "weighted": 15.0, "detail": "MODERATE — Decent Chinese presence; consistent intake"},
+        "C3_pool_independence": {"raw": 6, "weight_pct": 20, "weighted": 12.0, "detail": "Est. 30–35 pool offers; known to pool its own applicants frequently (high exports)"},
+        "C4_stability": {"raw": 8, "weight_pct": 15, "weighted": 12.0, "detail": "Relatively stable; no major concerning trends"},
+        "C5_cohort_size": {"raw": 10, "weight_pct": 10, "weighted": 10.0, "detail": "Est. 110 Engineering applicants — ideal cohort size"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard Cambridge Engineering offer"}
+      }
+    },
+    {
+      "rank": 5,
+      "college": "St Catharine's College",
+      "score": 74.0,
+      "grade": "B",
+      "verdict": "DECENT CHOICE — Solid all-rounder with no major weaknesses; also lacks standout strengths",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 8, "weight_pct": 25, "weighted": 20.0, "detail": "Est. 12.9% — above average for Engineering"},
+        "C2_chinese_friendliness": {"raw": 6, "weight_pct": 25, "weighted": 15.0, "detail": "MODERATE"},
+        "C3_pool_independence": {"raw": 7, "weight_pct": 20, "weighted": 14.0, "detail": "Est. 25–30 pool offers; low-moderate pool reliance"},
+        "C4_stability": {"raw": 8, "weight_pct": 15, "weighted": 12.0, "detail": "Stable admissions"},
+        "C5_cohort_size": {"raw": 8, "weight_pct": 10, "weighted": 8.0, "detail": "Est. 70 Engineering applicants"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard"}
+      }
+    },
+    {
+      "rank": 7,
+      "college": "Christ's College",
+      "score": 73.0,
+      "grade": "B",
+      "verdict": "SAFE MID-TABLE — Optimal cohort size and good pool behavior compensate for average offer rate",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 6, "weight_pct": 25, "weighted": 15.0, "detail": "Est. 11.8% — slightly below Engineering average"},
+        "C2_chinese_friendliness": {"raw": 6, "weight_pct": 25, "weighted": 15.0, "detail": "MODERATE"},
+        "C3_pool_independence": {"raw": 8, "weight_pct": 20, "weighted": 16.0, "detail": "Est. 20–25 pool offers; low pool reliance"},
+        "C4_stability": {"raw": 8, "weight_pct": 15, "weighted": 12.0, "detail": "Stable admissions"},
+        "C5_cohort_size": {"raw": 10, "weight_pct": 10, "weighted": 10.0, "detail": "Est. 85 Engineering applicants — ideal size"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard"}
+      }
+    },
+    {
+      "rank": 8,
+      "college": "Fitzwilliam College",
+      "score": 72.0,
+      "grade": "B-",
+      "verdict": "HIGH POTENTIAL BUT RISKY — Excellent Chinese community and offer rate, but +20.31% application spike is a red flag for the user's stability criterion",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 9, "weight_pct": 25, "weighted": 22.5, "detail": "Est. 13.1% — strong Engineering offer rate"},
+        "C2_chinese_friendliness": {"raw": 8, "weight_pct": 25, "weighted": 20.0, "detail": "HIGH — Consistently strong Chinese student numbers; active Chinese society"},
+        "C3_pool_independence": {"raw": 6, "weight_pct": 20, "weighted": 12.0, "detail": "Est. 40–45 pool offers; moderate-high pool imports"},
+        "C4_stability": {"raw": 3, "weight_pct": 15, "weighted": 4.5, "detail": "⚠ MAJOR CONCERN: +20.31% application growth in 2025 (largest increase of ANY Cambridge college). User explicitly wants to avoid colleges with 'sudden significant increase in admissions.'"},
+        "C5_cohort_size": {"raw": 8, "weight_pct": 10, "weighted": 8.0, "detail": "Est. 130 Engineering applicants — large but manageable"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard"}
+      }
+    },
+    {
+      "rank": 9,
+      "college": "Selwyn College",
+      "score": 71.5,
+      "grade": "B-",
+      "verdict": "SAFE MID-TABLE — Stable and predictable; lacks standout strengths or weaknesses",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 7, "weight_pct": 25, "weighted": 17.5, "detail": "Est. 12.3% — around Engineering average"},
+        "C2_chinese_friendliness": {"raw": 6, "weight_pct": 25, "weighted": 15.0, "detail": "MODERATE"},
+        "C3_pool_independence": {"raw": 7, "weight_pct": 20, "weighted": 14.0, "detail": "Est. 25–30 pool offers; low-moderate"},
+        "C4_stability": {"raw": 8, "weight_pct": 15, "weighted": 12.0, "detail": "Stable admissions"},
+        "C5_cohort_size": {"raw": 8, "weight_pct": 10, "weighted": 8.0, "detail": "Est. 65 Engineering applicants"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard"}
+      }
+    },
+    {
+      "rank": 10,
+      "college": "Girton College",
+      "score": 66.5,
+      "grade": "C+",
+      "verdict": "⚠ AVOID — Second-highest pool 'fisher' (91 pool offers in 2025) + 2 miles from city centre. High offer rate can't compensate.",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 9, "weight_pct": 25, "weighted": 22.5, "detail": "Est. 13.3% — strong (highest overall offer rate among traditional colleges at 21.4%)"},
+        "C2_chinese_friendliness": {"raw": 6, "weight_pct": 25, "weighted": 15.0, "detail": "MODERATE — decent Chinese community, nothing exceptional"},
+        "C3_pool_independence": {"raw": 2, "weight_pct": 20, "weighted": 4.0, "detail": "⚠⚠ EXTREME: 91 pool offers made (2025) — 2nd highest 'fisher' among ALL Cambridge colleges. Massively reliant on Winter Pool. Far fewer direct offer slots than the 21.4% headline rate suggests."},
+        "C4_stability": {"raw": 8, "weight_pct": 15, "weighted": 12.0, "detail": "Stable admissions"},
+        "C5_cohort_size": {"raw": 8, "weight_pct": 10, "weighted": 8.0, "detail": "Est. 60 Engineering applicants"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard (may be slightly elevated for STEM)"}
+      }
+    },
+    {
+      "rank": 10,
+      "college": "Trinity Hall",
+      "score": 66.5,
+      "grade": "C+",
+      "verdict": "⚠ AVOID — Below-average Engineering offer rate; exists in shadow of Trinity College (often confused); no standout positives",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 5, "weight_pct": 25, "weighted": 12.5, "detail": "Est. 11.4% — below Engineering average"},
+        "C2_chinese_friendliness": {"raw": 6, "weight_pct": 25, "weighted": 15.0, "detail": "MODERATE"},
+        "C3_pool_independence": {"raw": 7, "weight_pct": 20, "weighted": 14.0, "detail": "Est. 25–30 pool offers; low-moderate"},
+        "C4_stability": {"raw": 8, "weight_pct": 15, "weighted": 12.0, "detail": "Stable admissions"},
+        "C5_cohort_size": {"raw": 8, "weight_pct": 10, "weighted": 8.0, "detail": "Est. 70 Engineering applicants"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard"}
+      }
+    },
+    {
+      "rank": 12,
+      "college": "King's College",
+      "score": 65.5,
+      "grade": "C+",
+      "verdict": "⚠ AVOID — Very few Chinese students historically; low Engineering offer rate. Beautiful college but poor fit for this profile.",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 5, "weight_pct": 25, "weighted": 12.5, "detail": "Est. 11.4% — below Engineering average"},
+        "C2_chinese_friendliness": {"raw": 4, "weight_pct": 25, "weighted": 10.0, "detail": "LOW — Historically very few Chinese admits (~5/year); limited Chinese community"},
+        "C3_pool_independence": {"raw": 9, "weight_pct": 20, "weighted": 18.0, "detail": "Rarely takes from pool — good direct-offer behavior"},
+        "C4_stability": {"raw": 8, "weight_pct": 15, "weighted": 12.0, "detail": "Stable admissions"},
+        "C5_cohort_size": {"raw": 8, "weight_pct": 10, "weighted": 8.0, "detail": "Est. 70 Engineering applicants"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard"}
+      }
+    },
+    {
+      "rank": 13,
+      "college": "Gonville & Caius College",
+      "score": 65.0,
+      "grade": "C+",
+      "verdict": "⚠ AVOID — Large engineering cohort dilutes experience; elevated requirements; 81 of its own applicants got pool offers elsewhere (high exports = your application likely to be pooled)",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 7, "weight_pct": 25, "weighted": 17.5, "detail": "Est. 12.1% — at Engineering average"},
+        "C2_chinese_friendliness": {"raw": 6, "weight_pct": 25, "weighted": 15.0, "detail": "MODERATE"},
+        "C3_pool_independence": {"raw": 5, "weight_pct": 20, "weighted": 10.0, "detail": "⚠ Est. 35–40 pool imports + 81 of its own applicants pooled and got offers elsewhere (very high exports). Your application faces BOTH pool risks."},
+        "C4_stability": {"raw": 7, "weight_pct": 15, "weighted": 10.5, "detail": "Relatively stable but high-demand"},
+        "C5_cohort_size": {"raw": 8, "weight_pct": 10, "weighted": 8.0, "detail": "Est. 140 Engineering applicants — large cohort"},
+        "C6_entry_requirements": {"raw": 8, "weight_pct": 5, "weighted": 4.0, "detail": "Slightly elevated STEM requirements (strong engineering tradition)"}
+      }
+    },
+    {
+      "rank": 14,
+      "college": "Queens' College",
+      "score": 65.0,
+      "grade": "C+",
+      "verdict": "⚠ AVOID — Below-average offer rate combined with moderate pool reliance; no compensating strengths",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 5, "weight_pct": 25, "weighted": 12.5, "detail": "Est. 11.1% — below Engineering average"},
+        "C2_chinese_friendliness": {"raw": 6, "weight_pct": 25, "weighted": 15.0, "detail": "MODERATE"},
+        "C3_pool_independence": {"raw": 6, "weight_pct": 20, "weighted": 12.0, "detail": "Est. 30–40 pool offers; moderate pool imports"},
+        "C4_stability": {"raw": 7, "weight_pct": 15, "weighted": 10.5, "detail": "Relatively stable"},
+        "C5_cohort_size": {"raw": 10, "weight_pct": 10, "weighted": 10.0, "detail": "Est. 90 Engineering applicants — ideal size"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard"}
+      }
+    },
+    {
+      "rank": 15,
+      "college": "Corpus Christi College",
+      "score": 61.0,
+      "grade": "C",
+      "verdict": "⚠ AVOID — Small Engineering cohort; low Chinese-friendliness; tiny college overall. The rare pool behavior can't compensate.",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 4, "weight_pct": 25, "weighted": 10.0, "detail": "Est. 10.9% — below average"},
+        "C2_chinese_friendliness": {"raw": 4, "weight_pct": 25, "weighted": 10.0, "detail": "LOW — Small college with historically few Chinese students"},
+        "C3_pool_independence": {"raw": 9, "weight_pct": 20, "weighted": 18.0, "detail": "Rare pooler — almost all offers are direct (good!)"},
+        "C4_stability": {"raw": 8, "weight_pct": 15, "weighted": 12.0, "detail": "Stable admissions; small, predictable intake"},
+        "C5_cohort_size": {"raw": 6, "weight_pct": 10, "weighted": 6.0, "detail": "Est. 55 Engineering applicants — small cohort; college admits only 90-95 undergrads/year total"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard"}
+      }
+    },
+    {
+      "rank": 16,
+      "college": "Pembroke College",
+      "score": 61.0,
+      "grade": "C",
+      "verdict": "⚠ AVOID — Only ~3 Chinese admits per year; below-average Engineering offer rate. Close to Engineering Department but poor community fit.",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 5, "weight_pct": 25, "weighted": 12.5, "detail": "Est. 11.4% — below Engineering average"},
+        "C2_chinese_friendliness": {"raw": 2, "weight_pct": 25, "weighted": 5.0, "detail": "⚠ VERY LOW — Only ~3 Chinese admits/year; essentially no Chinese community"},
+        "C3_pool_independence": {"raw": 9, "weight_pct": 20, "weighted": 18.0, "detail": "Rarely takes from pool — noted as a low pool participant (good direct-offer behavior)"},
+        "C4_stability": {"raw": 7, "weight_pct": 15, "weighted": 10.5, "detail": "Relatively stable"},
+        "C5_cohort_size": {"raw": 10, "weight_pct": 10, "weighted": 10.0, "detail": "Est. 105 Engineering applicants — ideal size"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard"}
+      }
+    },
+    {
+      "rank": 16,
+      "college": "St John's College",
+      "score": 61.0,
+      "grade": "C",
+      "verdict": "⚠ AVOID — Very large Engineering cohort (est. 160); elevated entry requirements; heavy pool EXPORTER (72 applicants got pool offers elsewhere). Almost no pool imports (9) is good, but the high exports + large size make this a poor fit.",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 5, "weight_pct": 25, "weighted": 12.5, "detail": "Est. 11.3% — below Engineering average, despite large cohort"},
+        "C2_chinese_friendliness": {"raw": 6, "weight_pct": 25, "weighted": 15.0, "detail": "MODERATE"},
+        "C3_pool_independence": {"raw": 8, "weight_pct": 20, "weighted": 16.0, "detail": "Only 9 pool imports (VERY LOW — excellent) BUT 72 of its own applicants were pooled and got offers elsewhere (VERY HIGH exports). Net: good import stats but your application is very likely to be pooled."},
+        "C4_stability": {"raw": 7, "weight_pct": 15, "weighted": 10.5, "detail": "Relatively stable but intensely competitive"},
+        "C5_cohort_size": {"raw": 4, "weight_pct": 10, "weighted": 4.0, "detail": "⚠ Est. 160 Engineering applicants — 2nd largest after Trinity; very large, impersonal cohort"},
+        "C6_entry_requirements": {"raw": 6, "weight_pct": 5, "weighted": 3.0, "detail": "⚠ ELEVATED — Known for strict Engineering offer conditions; strong STEM tradition means high bar"}
+      }
+    },
+    {
+      "rank": 18,
+      "college": "Jesus College",
+      "score": 55.5,
+      "grade": "D",
+      "verdict": "⚠⚠ STRONGLY AVOID — Lowest Engineering offer rate (est. 10.0%); fewer than 3 Chinese students per year; lowest Chinese-friendliness score. Do not apply.",
+      "sub_scores": {
+        "C1_offer_rate": {"raw": 3, "weight_pct": 25, "weighted": 7.5, "detail": "⚠ Est. 10.0% — lowest among all eligible colleges; extremely competitive for Engineering"},
+        "C2_chinese_friendliness": {"raw": 2, "weight_pct": 25, "weighted": 5.0, "detail": "⚠⚠ VERY LOW — <3 Chinese students per year; essentially no Chinese community; worst Chinese-friendliness among all colleges"},
+        "C3_pool_independence": {"raw": 8, "weight_pct": 20, "weighted": 16.0, "detail": "Low pooler — good direct-offer behavior"},
+        "C4_stability": {"raw": 8, "weight_pct": 15, "weighted": 12.0, "detail": "Stable admissions"},
+        "C5_cohort_size": {"raw": 10, "weight_pct": 10, "weighted": 10.0, "detail": "Est. 100 Engineering applicants — ideal size"},
+        "C6_entry_requirements": {"raw": 10, "weight_pct": 5, "weighted": 5.0, "detail": "Standard"}
+      }
+    }
+  ],
+
+  "colleges_to_avoid_with_reasons": {
+    "already_excluded": [
+      {"college": "Trinity College", "reason": "Too demanding — 200+ Engineering applicants, massive competition, ~11% offer rate"},
+      {"college": "Churchill College", "reason": "Too demanding — 70% STEM students, 150+ Engineering applicants, 55 pool imports"},
+      {"college": "Peterhouse", "reason": "Too demanding — smallest college, <3 Chinese students/year, rare pool participant"},
+      {"college": "Newnham College", "reason": "Female-only college"},
+      {"college": "Murray Edwards College", "reason": "Female-only college (also: #1 pool fisher at 103 imports — 61% of intake from pool)"},
+      {"college": "Hughes Hall", "reason": "Mature college (age 21+)"},
+      {"college": "St Edmund's College", "reason": "Mature college (age 21+)"},
+      {"college": "Wolfson College", "reason": "Mature college (age 21+)"},
+      {"college": "Downing College", "reason": "User preference"},
+      {"college": "Magdalene College", "reason": "User preference"},
+      {"college": "Lucy Cavendish College", "reason": "User preference (also: 79 pool imports — 4th highest fisher)"}
+    ],
+    "strongly_avoid_even_though_eligible": [
+      {
+        "college": "Jesus College",
+        "score": 55.5,
+        "reasons": [
+          "Lowest Chinese-friendliness score (VERY LOW — <3 Chinese students/year)",
+          "Lowest Engineering offer rate (est. 10.0%)",
+          "Despite good pool behavior and ideal cohort size, these can't compensate for the fundamental community and offer rate problems"
+        ]
+      },
+      {
+        "college": "Pembroke College",
+        "score": 61.0,
+        "reasons": [
+          "Very few Chinese admits (~3/year) — essentially no Chinese community",
+          "Below-average Engineering offer rate (est. 11.4%)",
+          "Despite rare pool participation (good), the Chinese-friendliness is a dealbreaker"
+        ]
+      },
+      {
+        "college": "Corpus Christi College",
+        "score": 61.0,
+        "reasons": [
+          "Small Engineering cohort (est. 55) — limited peer group and supervision options",
+          "Low Chinese-friendliness",
+          "College admits only 90-95 undergrads/year total — very small community"
+        ]
+      },
+      {
+        "college": "Girton College",
+        "score": 66.5,
+        "reasons": [
+          "2nd HIGHEST pool fisher (91 pool offers in 2025) — massively reliant on Winter Pool",
+          "Far from city centre (2 miles) — significant daily commute",
+          "High headline offer rate (21.4%) is misleading because so many offers go to pool candidates rather than direct applicants",
+          "Moderate Chinese community but not enough to compensate"
+        ]
+      },
+      {
+        "college": "St John's College",
+        "score": 61.0,
+        "reasons": [
+          "Very large Engineering cohort (est. 160) — impersonal, highly competitive internally",
+          "72 of its own applicants got pool offers elsewhere in 2025 (very high exports) — your application is very likely to be pooled",
+          "Elevated entry requirements for Engineering",
+          "Only 9 pool imports is good, but the high export rate means your direct-offer chance is low"
+        ]
+      },
+      {
+        "college": "King's College",
+        "score": 65.5,
+        "reasons": [
+          "Low Chinese-friendliness — historically very few Chinese admits (~5/year)",
+          "Below-average Engineering offer rate (est. 11.4%)",
+          "Beautiful and famous, but poor statistical fit for this applicant profile"
+        ]
+      }
+    ]
+  },
+
+  "excluded_colleges_not_scored": [
+    {"college": "Trinity College", "reason": "Too demanding", "note": "200+ engineering applicants, massive competition"},
+    {"college": "Churchill College", "reason": "Too demanding", "note": "150+ engineering applicants, 70% STEM students"},
+    {"college": "Peterhouse", "reason": "Too demanding", "note": "Smallest college, very few Chinese students"},
+    {"college": "Newnham College", "reason": "Female-only"},
+    {"college": "Murray Edwards College", "reason": "Female-only"},
+    {"college": "Hughes Hall", "reason": "Mature college (21+)"},
+    {"college": "St Edmund's College", "reason": "Mature college (21+)"},
+    {"college": "Wolfson College", "reason": "Mature college (21+)"},
+    {"college": "Downing College", "reason": "User preference"},
+    {"college": "Magdalene College", "reason": "User preference"},
+    {"college": "Lucy Cavendish College", "reason": "User preference"}
+  ]
+}

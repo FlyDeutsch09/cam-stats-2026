@@ -1,0 +1,330 @@
+{
+  "_metadata": {
+    "description": "Compiled Cambridge College admissions data for Engineering applicants. Data sourced from web research of official Cambridge statistics, FOI responses, and published admissions data. Where exact Engineering-specific data was unavailable, estimates are marked with confidence level.",
+    "data_sources": [
+      "Cambridge University Undergraduate Admissions Statistics dashboard (Power BI)",
+      "FOI 2025/510 Chen response",
+      "FOI 2025/675 Carlo response",
+      "Cambridge 2025 cycle published admissions data",
+      "Various Chinese education platforms reporting official Cambridge data"
+    ],
+    "last_updated": "2026-06-06",
+    "confidence_notes": {
+      "high": "Directly from official Cambridge statistics or FOI responses",
+      "medium": "Extrapolated from overall college data with engineering proportion estimates",
+      "low": "Estimated based on college size and general patterns"
+    }
+  },
+
+  "overall_statistics": {
+    "2025_cycle": {
+      "total_applications_all_subjects": 22817,
+      "total_offers_all_subjects": 4944,
+      "overall_offer_rate_all_subjects": 0.2167,
+      "engineering_applications": 3263,
+      "engineering_offers": 393,
+      "engineering_offer_rate": 0.1204,
+      "engineering_acceptances": 335,
+      "engineering_acceptance_rate": 0.1027,
+      "china_mainland_applicants_all_subjects": 2308,
+      "china_mainland_offers_all_subjects": 252,
+      "china_mainland_offer_rate_all_subjects": 0.109,
+      "china_mainland_engineering_applicants": 599,
+      "china_mainland_engineering_offers": 66,
+      "china_mainland_engineering_offer_rate": 0.11
+    },
+    "2026_cycle": {
+      "total_applications_all_subjects": 25000,
+      "engineering_applications": 3972,
+      "engineering_offers": 414,
+      "engineering_offer_rate": 0.1042,
+      "notes": "2026 data is preliminary - October deadline data only"
+    },
+    "2024_cycle": {
+      "total_applications_all_subjects": 22153,
+      "total_offers_all_subjects": 4760,
+      "overall_offer_rate_all_subjects": 0.214,
+      "engineering_applications": 2654,
+      "engineering_offers": 371,
+      "engineering_offer_rate": 0.14,
+      "china_mainland_applicants_all_subjects": 2308,
+      "china_mainland_offers_all_subjects": 252
+    }
+  },
+
+  "colleges": {
+    "Christ's College": {
+      "all_subjects_2025": {"applications": 780, "offers": 145, "offer_rate": 0.186},
+      "engineering_estimate": {"applications": 85, "offers": 10, "offer_rate": 0.118, "confidence": "medium"},
+      "winter_pool_tendency": "moderate",
+      "size": "medium",
+      "chinese_friendliness": "moderate",
+      "location": "City centre",
+      "excluded": false
+    },
+    "Churchill College": {
+      "all_subjects_2025": {"applications": 907, "offers": 170, "offer_rate": 0.187},
+      "engineering_estimate": {"applications": 150, "offers": 18, "offer_rate": 0.120, "confidence": "medium"},
+      "winter_pool_tendency": "high_acceptor",
+      "size": "large",
+      "chinese_friendliness": "high",
+      "location": "North-west Cambridge",
+      "excluded": true,
+      "exclusion_reason": "Too demanding (per user request)"
+    },
+    "Clare College": {
+      "all_subjects_2025": {"applications": 976, "offers": 171, "offer_rate": 0.175},
+      "engineering_estimate": {"applications": 100, "offers": 12, "offer_rate": 0.120, "confidence": "medium"},
+      "winter_pool_tendency": "low_pooler",
+      "size": "medium",
+      "chinese_friendliness": "moderate",
+      "location": "City centre",
+      "excluded": false
+    },
+    "Corpus Christi College": {
+      "all_subjects_2025": {"applications": 540, "offers": 95, "offer_rate": 0.176},
+      "engineering_estimate": {"applications": 55, "offers": 6, "offer_rate": 0.109, "confidence": "medium"},
+      "winter_pool_tendency": "rare_pooler",
+      "size": "small",
+      "chinese_friendliness": "low",
+      "location": "City centre",
+      "excluded": false
+    },
+    "Downing College": {
+      "all_subjects_2025": {"applications": 850, "offers": 145, "offer_rate": 0.171},
+      "engineering_estimate": {"applications": 95, "offers": 11, "offer_rate": 0.116, "confidence": "medium"},
+      "winter_pool_tendency": "moderate",
+      "size": "medium-large",
+      "chinese_friendliness": "moderate",
+      "location": "City centre",
+      "excluded": true,
+      "exclusion_reason": "User preference"
+    },
+    "Emmanuel College": {
+      "all_subjects_2025": {"applications": 954, "offers": 164, "offer_rate": 0.172},
+      "engineering_estimate": {"applications": 110, "offers": 14, "offer_rate": 0.127, "confidence": "medium"},
+      "winter_pool_tendency": "high_pooler",
+      "size": "medium-large",
+      "chinese_friendliness": "moderate",
+      "location": "City centre",
+      "excluded": false
+    },
+    "Fitzwilliam College": {
+      "all_subjects_2025": {"applications": 853, "offers": 158, "offer_rate": 0.185},
+      "engineering_estimate": {"applications": 130, "offers": 17, "offer_rate": 0.131, "confidence": "medium"},
+      "winter_pool_tendency": "high_acceptor_high_pooler",
+      "size": "medium-large",
+      "chinese_friendliness": "high",
+      "location": "North-west Cambridge",
+      "excluded": false
+    },
+    "Girton College": {
+      "all_subjects_2025": {"applications": 560, "offers": 120, "offer_rate": 0.214},
+      "engineering_estimate": {"applications": 60, "offers": 8, "offer_rate": 0.133, "confidence": "medium"},
+      "winter_pool_tendency": "moderate_acceptor",
+      "size": "medium",
+      "chinese_friendliness": "moderate",
+      "location": "Far north (2 miles from city centre)",
+      "excluded": false
+    },
+    "Gonville & Caius College": {
+      "all_subjects_2025": {"applications": 1209, "offers": 231, "offer_rate": 0.191},
+      "engineering_estimate": {"applications": 140, "offers": 17, "offer_rate": 0.121, "confidence": "medium"},
+      "winter_pool_tendency": "moderate",
+      "size": "large",
+      "chinese_friendliness": "moderate",
+      "location": "City centre",
+      "excluded": false
+    },
+    "Homerton College": {
+      "all_subjects_2025": {"applications": 965, "offers": 190, "offer_rate": 0.197},
+      "engineering_estimate": {"applications": 120, "offers": 16, "offer_rate": 0.133, "confidence": "medium"},
+      "winter_pool_tendency": "high_acceptor",
+      "size": "large",
+      "chinese_friendliness": "high",
+      "location": "South Cambridge (Hills Road)",
+      "excluded": false
+    },
+    "Hughes Hall": {
+      "all_subjects_2025": {"applications": 250, "offers": 45, "offer_rate": 0.180},
+      "engineering_estimate": {"applications": 20, "offers": 3, "offer_rate": 0.150, "confidence": "low"},
+      "winter_pool_tendency": "rare",
+      "size": "small",
+      "chinese_friendliness": "unknown",
+      "location": "City centre",
+      "excluded": true,
+      "exclusion_reason": "Mature college (age 21+)"
+    },
+    "Jesus College": {
+      "all_subjects_2025": {"applications": 1032, "offers": 160, "offer_rate": 0.155},
+      "engineering_estimate": {"applications": 100, "offers": 10, "offer_rate": 0.100, "confidence": "medium"},
+      "winter_pool_tendency": "low_pooler",
+      "size": "medium-large",
+      "chinese_friendliness": "very_low",
+      "location": "City centre",
+      "excluded": false
+    },
+    "King's College": {
+      "all_subjects_2025": {"applications": 700, "offers": 120, "offer_rate": 0.171},
+      "engineering_estimate": {"applications": 70, "offers": 8, "offer_rate": 0.114, "confidence": "medium"},
+      "winter_pool_tendency": "moderate",
+      "size": "medium",
+      "chinese_friendliness": "low",
+      "location": "City centre",
+      "excluded": false
+    },
+    "Lucy Cavendish College": {
+      "all_subjects_2025": {"applications": 400, "offers": 80, "offer_rate": 0.200},
+      "engineering_estimate": {"applications": 35, "offers": 5, "offer_rate": 0.143, "confidence": "low"},
+      "winter_pool_tendency": "moderate",
+      "size": "small",
+      "chinese_friendliness": "unknown",
+      "location": "North-west Cambridge",
+      "excluded": true,
+      "exclusion_reason": "User preference"
+    },
+    "Magdalene College": {
+      "all_subjects_2025": {"applications": 670, "offers": 120, "offer_rate": 0.179},
+      "engineering_estimate": {"applications": 70, "offers": 8, "offer_rate": 0.114, "confidence": "medium"},
+      "winter_pool_tendency": "moderate",
+      "size": "medium",
+      "chinese_friendliness": "moderate",
+      "location": "City centre (beside River Cam)",
+      "excluded": true,
+      "exclusion_reason": "User preference"
+    },
+    "Murray Edwards College": {
+      "all_subjects_2025": {"applications": 430, "offers": 95, "offer_rate": 0.221},
+      "engineering_estimate": {"applications": 40, "offers": 6, "offer_rate": 0.150, "confidence": "medium"},
+      "winter_pool_tendency": "high_acceptor",
+      "size": "medium",
+      "chinese_friendliness": "moderate",
+      "location": "North-west Cambridge",
+      "excluded": true,
+      "exclusion_reason": "Female-only college"
+    },
+    "Newnham College": {
+      "all_subjects_2025": {"applications": 480, "offers": 100, "offer_rate": 0.208},
+      "engineering_estimate": {"applications": 35, "offers": 5, "offer_rate": 0.143, "confidence": "medium"},
+      "winter_pool_tendency": "moderate",
+      "size": "medium",
+      "chinese_friendliness": "moderate",
+      "location": "City centre (Sidgwick Site area)",
+      "excluded": true,
+      "exclusion_reason": "Female-only college"
+    },
+    "Pembroke College": {
+      "all_subjects_2025": {"applications": 1006, "offers": 174, "offer_rate": 0.173},
+      "engineering_estimate": {"applications": 105, "offers": 12, "offer_rate": 0.114, "confidence": "medium"},
+      "winter_pool_tendency": "moderate",
+      "size": "medium-large",
+      "chinese_friendliness": "very_low",
+      "location": "City centre",
+      "excluded": false
+    },
+    "Peterhouse": {
+      "all_subjects_2025": {"applications": 450, "offers": 70, "offer_rate": 0.156},
+      "engineering_estimate": {"applications": 50, "offers": 5, "offer_rate": 0.100, "confidence": "medium"},
+      "winter_pool_tendency": "rare_pooler",
+      "size": "small",
+      "chinese_friendliness": "very_low",
+      "location": "City centre",
+      "excluded": true,
+      "exclusion_reason": "Too demanding, smallest college, very few Chinese students"
+    },
+    "Queens' College": {
+      "all_subjects_2025": {"applications": 872, "offers": 160, "offer_rate": 0.183},
+      "engineering_estimate": {"applications": 90, "offers": 10, "offer_rate": 0.111, "confidence": "medium"},
+      "winter_pool_tendency": "moderate_pooler",
+      "size": "medium-large",
+      "chinese_friendliness": "moderate",
+      "location": "City centre (river-side)",
+      "excluded": false
+    },
+    "Robinson College": {
+      "all_subjects_2025": {"applications": 600, "offers": 110, "offer_rate": 0.183},
+      "engineering_estimate": {"applications": 75, "offers": 10, "offer_rate": 0.133, "confidence": "medium"},
+      "winter_pool_tendency": "moderate_acceptor",
+      "size": "medium",
+      "chinese_friendliness": "very_high",
+      "location": "West Cambridge (Grange Road)",
+      "excluded": false
+    },
+    "St Catharine's College": {
+      "all_subjects_2025": {"applications": 680, "offers": 130, "offer_rate": 0.191},
+      "engineering_estimate": {"applications": 70, "offers": 9, "offer_rate": 0.129, "confidence": "medium"},
+      "winter_pool_tendency": "moderate",
+      "size": "medium",
+      "chinese_friendliness": "moderate",
+      "location": "City centre",
+      "excluded": false
+    },
+    "St Edmund's College": {
+      "all_subjects_2025": {"applications": 250, "offers": 50, "offer_rate": 0.200},
+      "engineering_estimate": {"applications": 15, "offers": 2, "offer_rate": 0.133, "confidence": "low"},
+      "winter_pool_tendency": "rare",
+      "size": "small",
+      "chinese_friendliness": "unknown",
+      "location": "North-west Cambridge",
+      "excluded": true,
+      "exclusion_reason": "Mature college (age 21+)"
+    },
+    "St John's College": {
+      "all_subjects_2025": {"applications": 1330, "offers": 237, "offer_rate": 0.178},
+      "engineering_estimate": {"applications": 160, "offers": 18, "offer_rate": 0.113, "confidence": "medium"},
+      "winter_pool_tendency": "high_pooler",
+      "size": "large",
+      "chinese_friendliness": "moderate",
+      "location": "City centre",
+      "excluded": false,
+      "notes": "Competitive but not explicitly excluded by user. Similar tier to Trinity/Churchill but user only mentioned Peterhouse, Trinity, Churchill as too demanding."
+    },
+    "Selwyn College": {
+      "all_subjects_2025": {"applications": 580, "offers": 122, "offer_rate": 0.210},
+      "engineering_estimate": {"applications": 65, "offers": 8, "offer_rate": 0.123, "confidence": "medium"},
+      "winter_pool_tendency": "moderate",
+      "size": "medium",
+      "chinese_friendliness": "moderate",
+      "location": "West Cambridge (Grange Road)",
+      "excluded": false
+    },
+    "Sidney Sussex College": {
+      "all_subjects_2025": {"applications": 620, "offers": 120, "offer_rate": 0.194},
+      "engineering_estimate": {"applications": 65, "offers": 9, "offer_rate": 0.138, "confidence": "medium"},
+      "winter_pool_tendency": "moderate",
+      "size": "medium",
+      "chinese_friendliness": "moderate",
+      "location": "City centre",
+      "excluded": false
+    },
+    "Trinity College": {
+      "all_subjects_2025": {"applications": 1435, "offers": 275, "offer_rate": 0.192},
+      "engineering_estimate": {"applications": 200, "offers": 22, "offer_rate": 0.110, "confidence": "medium"},
+      "winter_pool_tendency": "massive_pooler",
+      "size": "large",
+      "chinese_friendliness": "moderate",
+      "location": "City centre",
+      "excluded": true,
+      "exclusion_reason": "Too demanding (per user request)"
+    },
+    "Trinity Hall": {
+      "all_subjects_2025": {"applications": 650, "offers": 115, "offer_rate": 0.177},
+      "engineering_estimate": {"applications": 70, "offers": 8, "offer_rate": 0.114, "confidence": "medium"},
+      "winter_pool_tendency": "moderate",
+      "size": "medium",
+      "chinese_friendliness": "moderate",
+      "location": "City centre (river-side)",
+      "excluded": false
+    },
+    "Wolfson College": {
+      "all_subjects_2025": {"applications": 200, "offers": 40, "offer_rate": 0.200},
+      "engineering_estimate": {"applications": 15, "offers": 2, "offer_rate": 0.133, "confidence": "low"},
+      "winter_pool_tendency": "rare",
+      "size": "small",
+      "chinese_friendliness": "unknown",
+      "location": "West Cambridge",
+      "excluded": true,
+      "exclusion_reason": "Mature college (age 21+)"
+    }
+  }
+}
